@@ -2,6 +2,7 @@
 import flatpickr from 'flatpickr';
 // Дополнительный импорт стилей
 import 'flatpickr/dist/flatpickr.min.css';
+import '../css/timer.css';
 
 const refs = {
   colorPiecker: document.querySelector('#datetime-picker'),

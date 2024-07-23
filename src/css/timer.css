@@ -1,0 +1,18 @@
+.timer {
+  width: 360px;
+  margin: 0 auto;
+  font-size: 48px;
+}
+
+button {
+  padding: 15px;
+  font-size: 24px;
+  margin: 15px 30px;
+  border-radius: 5px;
+}
+
+input {
+  font-size: 24px;
+  display: block;
+  margin: 15px 30px;
+}
