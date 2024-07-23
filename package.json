@@ -1,21 +1,21 @@
 {
-  "name": "parcel-project-template",
+  "name": "hw-09-test",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://serhiilukianenkodev.github.io/hw-09-test",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /hw-09-test/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/serhiilukianenkodev/hw-09-test.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Serhii Lukianenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/serhiilukianenkodev/hw-09-test/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
