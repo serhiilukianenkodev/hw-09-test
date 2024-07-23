@@ -20,7 +20,7 @@ refs.stopBtn.disabled = true;
 const calendar = flatpickr(refs.colorPiecker, {
   minDate: Date.now() + 2 * 60 * 1000,
   enableTime: true,
-  //   enableSeconds: true,
+  enableSeconds: true,
 });
 let intervalId = null;
 
@@ -68,9 +68,9 @@ function splitTime(ms) {
   const sec = 1000;
 
   const days = Math.floor(ms / day);
-  const hours = Math.floor((ms - days * day) / hour);
-  const mins = Math.floor((ms - days * day - hours * hour) / min);
-  const secs = Math.floor((ms - days * day - hours * hour - mins * min) / sec);
+  const hours = Math.floor((ms % day) / hour);
+  const mins = Math.floor((ms % hour) / min);
+  const secs = Math.floor((ms % min) / sec);
 
   return { days, hours, mins, secs };
 }
