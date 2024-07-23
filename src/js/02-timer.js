@@ -19,15 +19,19 @@ refs.stopBtn.disabled = true;
 
 const calendar = flatpickr(refs.colorPiecker, {
   minDate: Date.now() + 2 * 60 * 1000,
+  defaultDate: Date.now() + 2 * 60 * 1000,
   enableTime: true,
   enableSeconds: true,
+  time_24hr: true,
 });
 let intervalId = null;
 
 function onStartBtnClick() {
   const selectedDate = calendar.selectedDates[0];
+
   if (selectedDate) {
     blockStartKey(true);
+
     intervalId = setInterval(() => {
       const deltaTime = selectedDate - Date.now();
       if (deltaTime <= 0) {
