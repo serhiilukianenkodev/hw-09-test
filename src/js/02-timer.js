@@ -1,6 +1,6 @@
-// Описан в документации
 import flatpickr from 'flatpickr';
-// Дополнительный импорт стилей
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import 'flatpickr/dist/flatpickr.min.css';
 import '../css/timer.css';
 
@@ -17,6 +17,15 @@ const refs = {
 refs.startBtn.addEventListener('click', onStartBtnClick);
 refs.stopBtn.addEventListener('click', onStopBtnClick);
 refs.stopBtn.disabled = true;
+
+const notifyOptions = {
+  timeout: 5000,
+  position: 'center-top',
+  fontSize: '24px',
+  width: '360px',
+};
+
+Notify.warning('Pick pade before starting', notifyOptions);
 
 const calendar = flatpickr(refs.colorPiecker, {
   minDate: Date.now() + 2 * 60 * 1000,
@@ -39,7 +48,8 @@ function onStartBtnClick() {
         clearInterval(intervalId);
         fillTime();
         blockStartKey(false);
-        alert('No time left😜');
+        Notify.failure('No time left😜', notifyOptions);
+        // alert('No time left😜');
         return;
       }
       fillTime(splitTime(deltaTime));
